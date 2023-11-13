@@ -1,0 +1,265 @@
+1.6.2~News:
+
+11/08/2023
+	When loading from the computer, all pieces being loaded will be scanned to ensure they meet inspection requirements before being 
+	loaded.
+
+11/07/2023
+	Changes to bundle creation have been maade. This was done to increase the speed and accuracy of the creation. A side-affect of 
+	this is unused bundleIDs will be reused to save space in the database.
+
+11/06/2023
+	Logging in you will be greeted by a "Select User" screen. This has been implemented to allow better control of access amongst 
+	users. Admin Portal can now only be accessed by those with admin privileges. Scanning material onto a load now provides feedback 
+	for each piece. In addition to this, scanning for inspections is now allowed from the computer. 
+
+11/02/2023
+	Sizing on admin portal has been adjusted to better fit the status and inspection check lists. The button to add and edit the 
+	values has been moved to the bottom of the list with a "+" icon and switches to say "Edit" when a status or inspection has been
+	selected.
+
+10/31/2023
+	A new button has been added to check material currently on Tekla Loads against material on SteelCoded loads. This finds the 
+	inconsistencies and then allows the user to run a function to automatically fix them.
+
+10/25/2023
+	Small changes have been made to allow for inspection checks to be created for each status. This allows for each inspection to have 
+	customized values that the user will check at that station. 
+
+10/24/2023
+	Massive changes to the UI have been made. These were done to allow for more screen space and future alterations to the visuals of
+	the widgets. In addition to this, a Visual bug when importing material that needed to be updated has been fixed. The material would 
+	be marked for an update even when it is the same due to comparing empty values.
+
+10/18/2023
+	Changes to the sorting in QRGenerator to fix a visual bug regarding the quantity for each material. Another visual bug that has 
+	been fixed is when selecting material to delete, the improper location of the material was being shown. In addition to this, a new 
+	sorting by dimensions has been added. This can be done by clicking the "Dimensions" column above the selected parts.
+
+10/16/2023
+	QR Generator now shows each label that is being created and if they were successful or not. Then if they were not successful it
+	allows for a retry to be used to keep the order of the labels.
+
+10/09/2023
+	Kiss importing has now been adjusted to allow for more specific imports. The changes comes with a new feature to add/remove parts
+	from the import. This will allow different shops to import only the material they need instead of an entire sequence or shape. 
+	Also, loaded capacity has been added next to the Loads in the "Loaded" station on production grids.
+
+10/06/2023
+	A quick patch in order to fix a bug that would occur when selecting multiple of the same main marks to reprint. Additionally
+	when sorting on the selected material, the qtys not switching has been fixed.
+
+10/05/2023
+	QR Printing has been updated to allow for more consistency when generating the labels. A PDF will now be shown on screen 
+	and allow the user to view, save, or print the PDF. This will allow the User to save the PDF in case of a miss-print.
+
+10/03/2023
+	Job Material and Production Table widgets have been merged with the new Job Info widget. This was done to improve
+	ease of use. The production table has also been reworked to show a grid for each station. Upon clicking on these
+	stations, the material within these stations will be shown which will allow for reprinting and scanning onto a load.
+	There has also been a new button added that shows the scan history of a job with timestamps and stations of the scans.
+
+	In addition to these new features, smaller changes have been made such as status editing/deleting, tooltips for QRGenerator,
+	and locations of PartID and Main Mark Search.
+
+09/25/2023
+	The Server architechture and computations have received an entire overhaul. This was done in efforts to create a
+	server that reboots when an error occurs and is easily updated when updates need to be made. This change should 
+	mainly affect connections to external apps by allowing attempts to be made again by the server before prompting an
+	error to the user. This should prevent small errors from occuring and notify the user of larger ones.
+
+09/15/2023
+	An error was caught when importing material from a deleted sequence into an existing sequence that would cause the
+	program to import it as a new material. This would generate a new label and delete the old label. This has been
+	adjusted to account for all material regardless of what sequence is being imported. This will prioritize updating
+	existing material over adding and deleting material. Also the importing screen now shows strictly what is being 
+	altered within the job. This is to streamline the information being shown on the screen.
+
+	In addition to this, Admin Portal received some changes. Mainly alterations to visuals being the Employee creation
+	and the inspections on the employee screen. New features have been added to this widget, that being the new "Change
+	Pin" and the "Create Status" buttons. The new statuses will be used in a future phone update to allow for customization
+	on various statuses for each shop. This will allow for future reporting on each status and exact locations for inspections.
+
+9/06/2023
+	Changes to the data tables have been made. This allows for the headers to remain at the top of the screen for each 
+	column. In addition to this, Job Searching has been changes to allow for job name searches as well. Label print
+	date has been added to the labels. As well as sorting on the QR Generator screen to allow for easier finding of
+	the desired label. 
+
+8/31/2023
+	Hot Fix for issues regarding properly marking barcodes that have been printed.
+
+8/28/2023
+	Small changes have been pushed out regarding the 'Job Material' Widget. These changes allow for searching of partID
+	the same way as Main Mark. In addition to this, Inspections have been re-introduced on the Admin Portal. By selecting
+	a job, inspection records will fill the graph and user data.
+
+8/23/2023
+	Say goodbye to update hassles with the launch of the SteelCoded launcher. This application 
+	is here to transform your software update process. With the launcher updates will be faster and easier to install.
+
+~Patches:
+
+Version 1.6.2:
+	New Features:
+	- Material being scanned onto loads will be automatically reviewed to ensure all enforced inspections are met.
+
+Version 1.6.1:
+	Changes:
+	- Bundle creation has been altered to be more accurate and faster. This should not change any way this looks other than 
+		deleted bundles may have their IDs reused to save space.
+
+Version 1.6.0:
+	New Features:
+	- Material can now inspected from the computer. This will allow for missed scans to be performed. 
+	- Scanning onto loads now provides feedback on which pieces were successful.
+	- Logins for employees has been implemented.
+
+	Changes:
+	- Admin Portal can now only be accessed by those with admin privileges.
+
+Version 1.5.1:
+	Changes:
+	- Admin Portal has been resized and some UI changes have been made.
+
+Version 1.5.0:
+	New Features:
+	- New "Reconcile Job Loads" button that checks current loads in tekla against loads in SteelCoded to find inconsistencies 
+		and give the user the option to automatically fix them.
+
+	Changes:
+	- Slight resizing has been applied to Admin Portal. 
+
+Version 1.4.6:
+	Changes:
+	- Loads now show the Quantity reflected in tekla next to them.
+
+Version 1.4.5:
+	New Features:
+	- Inspection Checks have been added to allow for custom inspection values for each status.
+
+	Changes:
+	- Settings button has been moved from the top right to the left column to keep a uniform look.
+
+Version 1.4.4:
+	Bug Fixes:
+	- Fixed a Visual bug when importing material that needed to be updated. The material would be marked for an update even 
+		when it is the same due to comparing empty values.
+
+	Changes:
+	- Changes to the UI have been made. The various widgets have been moved from the right side of the screen to the left.
+		This was done in order to make better use of screen space and improve the visuals of the application.
+
+	New Features:
+	- A new 'Settings' button has been added to the top right of the screen. This new screen currently allows the user to 
+		change the color scheme of the entire application.
+
+Version 1.4.3:
+	Bug Fixes:
+	- QRGenerator visual bug has been fixed regarding improper quantities showing.
+	- Visual bug  when selecting parts to delete showing wrong location has been fixed.
+
+	New Features:
+	- QRGenerator now has a dimensions sorting that can be done to the selected material.
+
+Version 1.4.0:
+	New Features:
+	- Kiss Import now allows the removal of parts from the import allowing for a more specified import.
+	- Loads now show loaded capacity.
+	- QR Generator now shows a list of the labels being printed by partID.
+	- QR Generator detects failed labels and allows for a retry on printing.
+
+	Changes:
+	- UI colors have been updated for a cleaner look and feel. As well as the Icons and Loading screens for the new Logo.
+
+Version 1.3.3:
+	Bug Fixes:
+	- When selecting parts for reprinting. If the selected main mark has multiple labels the program would select all of them.
+		This has been fixed as well as a visual glitch where bundles would not be displayed properly on reprint.
+	- Quantitys not swapping when sorting the list has been fixed.
+
+Varsion 1.3.2:
+	New Features:
+	- PDF Viewer for generated labels.
+
+Version 1.3.1:
+	Changes:
+	- ScanHistory table has been reworked to show all scans per partID and allow sorting between columns
+
+Version 1.3.0:
+	Bug Fixes:
+	- QRGenerator selecting parts for reprinting would not allow the right part to be selected if the list was being sorted
+		by main mark.
+	
+	Changes:
+	- The "Job Material" and "Production Table" widgets have been merged for both simplicity of use and stability of database 
+		calls.
+	- The PartID Search and Main Mark Search have been moved to the new "Job Info" widget which can be seen upon selecting a 
+		job on the new "Job Production" widget.
+	- A tooltip has been added to the reprint button on QRGenerator to clarify what the button does.
+
+	New Features:
+	- QRGenerator now has an "X" button to remove specific labels from the current print list. This allows users to print
+		specific numbers of labels from a bundle of materials by separating the number they want and removing the others.
+	- There is now a Scan History for each job. This will pull all of the scans made for a job and their timestamps.
+	- Job Info has been added to the new "Job Production" widget. This shows basic information for the job, as well as 
+		has a new button allowing for Scan History to be pulled for the job.
+	- Group loading has now been added. This is will allow the user to select multiple pieces to load from the computer.
+	- Group Reprinting now has an additional location in the stations grid. This can be accessed by selecting a station,
+		selecting a main mark, and selecting a specific part to view.
+	- Status editing and deleting has been added.
+
+Version 1.2.3:
+	Changes:
+	- Major Server changes have been made. This has been done in efforts to improve stability and uptime.
+	- Admin Portal has received some visual adjustments with widget placements to allow for a Server widget.
+
+Version 1.2.2:
+	Bug Fixes:
+	- Importing kiss files has been adjusted to better account for material being switched between existing sequences.
+
+	Changes: 
+	- Employee Inspections now shows the location where the inspection was completed.
+	- Visuals of creating a new employee have been updated for ease of use.
+	- Loads in production are now sorted by load number.
+
+	New Features:
+	- Employee Pins can now be changed in the admin portal on the employee.
+	- Employee Access Levels can now be changed in the admin portal on the employee.
+	- Status creation is now available. Changes on the phone will soon be made to reflect these changes.
+
+Version 1.2.1:
+	Bug Fixes:
+	- Changes to database to ensure each barcode is properly marked as printed.
+
+	Changes:
+	- Job Searching has been changed to allow for both job number and name searching.
+	- Date printed has been added to the labels in the bottom right corner.
+	- Headers for the following tables now stay at the top when scrolling:
+		- Job Material Table
+		- Select Deletion Table
+		- Employee Table
+		- Individual Employee Inspections Table
+		- Kiss Import table
+		- QR Material Table
+	
+	New Features:
+	- Job Search has been added to the job drawer.
+	- MainMark on "QR Generator" now sorts the material by Alpha-Numerics
+
+Version 1.2.0
+	Hot Fix:
+	- A quick bug fix regarding marking barcodes that have been printed.
+
+Version 1.1.9
+	New Features:
+	- PartID search has been implemented in the 'Job Material' widget. To use it, click the header 'PartID' to pull it up.
+	- Inspections has been re-introduced but only for specified jobs. This was done to make it more reliable.
+
+	Bug Fixes:
+	- Error with Job Material Table showing material twice.
+	- Graphical fixes with searching on main mark and partID.
+
+Version 1.1.8
+	- Launch of the new updater
+	- Changes to part import location to improve file management
